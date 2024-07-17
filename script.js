@@ -1,5 +1,5 @@
 class TransaccionBase {
-    constructor(producto, fecha) {
+    constructor( producto, fecha ) {
       this.producto = producto;
       this.fecha = fecha;
     }
@@ -11,6 +11,7 @@ class TransaccionBase {
       this.cantidad = cantidad;
       this.precio = precio;
     }
+    
   }
   
   let ventas = [];
@@ -41,12 +42,9 @@ class TransaccionBase {
         ventas.splice(indice, 1);
         console.log('Su venta ha sido cancelada exitosamente.');
       } else {
-        console.log(
-          `El número de venta no está asociado a ninguna venta existente.`
-        );
+        console.log(`El número de venta no está asociado a ninguna venta existente.` );
       }
     }
-    return;
   }
   
   function mostrarVentas() {
@@ -59,23 +57,23 @@ class TransaccionBase {
         console.log( `Venta #: ${i + 1} Producto: ${venta.producto}, Cantidad: ${venta.cantidad}, Precio: ${venta.precio}`);
       }
     }
-    return;
+  
   }
   function menu() {
-    let opcion = null ;
-
+   
     do {
-      opcion = prompt('Seleccione una opción:\n1. Registrar Venta\n2. Cancelar Venta\n3. Mostrar Ventas\n4. Salir');
-  
+     let opcion = prompt('Seleccione una opción:\n1. Registrar Venta\n2. Cancelar Venta\n3. Mostrar Ventas\n4. Salir');
+
       switch (opcion) {
         case '1':
 let c1;
+;
 do{
 
   registrarVenta();
  c1 = prompt ('Marque 1 si desea agreagar otra venta y 0 en caso contrario');
 
-}while(c1 === 1);
+}while(opcion === '1');
           
           break;
         case '2':
