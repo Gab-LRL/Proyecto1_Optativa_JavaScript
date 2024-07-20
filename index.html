@@ -1,10 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8">
+    <metab http-equiv = "X-UA-Compatible" content ="IE = edge"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tareaJS</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    
+   
+  
+    <div class="container">
+      <div class="form-content">
+        <h1 id="title">Registro de ventas</h1>
+        <form>
+
+
+<div class="input-group">
+  <div class="input-field" id="nameInput">
+    <i class="fa-solid fa-cart-arrow-down"></i>
+    <button onclick="registrarVenta()" id="signUp0" type="button" >Registrar venta</button>
+  </div>
+</div>
+
+<div class="input-group">
+  <div class="input-field">
+    <i class="fa-solid fa-folder-open"></i>
+    <button onclick="mostrarVentas()" id="signUp1" type="button" >Mostrar ventas</button>
+  </div>
+</div>
+
+<div class="input-group">
+  <div class="input-field">
+    <i class="fa-solid fa-trash"></i>
+    <button onclick="cancelarVenta()" id="signUp2" type="button"  >Eliminar ventas</button>
+  </div>
+</div>
+
+
+
+
+
+        </form>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -14,7 +14,7 @@ class TransaccionBase {
     
   }
   
-  let ventas = [];
+ const ventas = [];
   
   // pedir las ventas para registrarlas
   function registrarVenta() {
@@ -25,13 +25,15 @@ class TransaccionBase {
   
     const nuevaVenta = new Venta(producto, fecha, cantidad, precio);
     ventas.push(nuevaVenta);
-    console.log('Su venta fue registrada exitosamente.');
   }
   
   // eliminar la venta
   function cancelarVenta() {
     if (ventas.length === 0) {
-      console.log('No hay ventas registradas.');
+    let temp = parseInt( prompt('No poseemos un registro de ventas actualmente. Seleccione:\n1. Ingresar una venta\n2.Finalizar el servicio')) ;
+    if(temp === 1) {
+      registrarVenta() ;
+    }
     } else {
       mostrarVentas();
       const indice = parseInt(
@@ -59,7 +61,7 @@ class TransaccionBase {
     }
   
   }
-  function menu() {
+ /* function menu() {
    
     do {
      let opcion = prompt('Seleccione una opción:\n1. Registrar Venta\n2. Cancelar Venta\n3. Mostrar Ventas\n4. Salir');
@@ -73,7 +75,7 @@ do{
   registrarVenta();
  c1 = prompt ('Marque 1 si desea agreagar otra venta y 0 en caso contrario');
 
-}while(opcion === '1');
+}while(c1=== '1');
           
           break;
         case '2':
@@ -90,7 +92,7 @@ do{
       }
     } while (opcion !== '4');
   }
-  menu();
+  menu();*/
   
   //22 Tarea: Sistema de Registro de Ventas:
   //Crea una clase TransaccionBase con propiedades producto y fecha.
